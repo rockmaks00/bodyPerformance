@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body>
+    <h2>
+        Расскажите немного о себе (все поля обязательны)
+    </h2>
+        <form name="body_data" id="body_data" action="/result/" method="get">  
+            <div>
+                Как вас зовут?
+                <input type="text" name="first_name" id="first_name">
+            </div>
+            <div>
+                Пол
+                <select name="gender">
+                    <option value="0">М</option>
+                    <option value="1">Ж</option>
+                  </select>
+            </div>
+            <div>
+                Возврат
+                <input type="text" name="age" id="age">
+            </div>
+            <div>
+                Рост
+                <input type="text" name="height_cm" id="height_cm">
+            </div>
+            <div>
+                Вес
+                <input type="text" name="weight_kg" id="weight_kg">
+            </div>
+            <div>
+                % содержания жира
+                <input type="text" name="fat" id="fat">
+            </div>
+            <div>
+                Нижнее артериальное давление
+                <input type="text" name="diastolic" id="diastolic">
+            </div>
+            <div>
+                Верхнее артериальное давление
+                <input type="text" name="systolic" id="systolic">
+            </div>
+            <div>
+                Сила хвата
+                <input type="text" name="gripForce" id="gripForce">
+            </div>
+            <div>
+                Наклон в положение сидя (см.)
+                <input type="text" name="sit_and_bend" id="sit_and_bend">
+            </div>
+            <div>
+                Количество приседаний (макс. кол. раз)
+                <input type="text" name="situps" id="situps">
+            </div>
+            <div>
+                Прыжок в длину (см.)
+                <input type="text" name="jump_cm" id="jump_cm">
+            </div>
+
+            <div>
+                Оценка:
+                <input type="text" name="body_class" id="body_class">
+            </div>
+            <input type="submit"> Получить результат </input>
+        </form>
+    <footer >
+        <span id="q"> © 2022 OOO "Kazakh&Technologies"</span>
+        <span>
+            Контакты
+            Полезная информация
+        </span>
+    </footer>
+</body>
+</html>
