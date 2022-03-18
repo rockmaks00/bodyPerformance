@@ -98,13 +98,6 @@ table {
   margin: 0 -1px;
 }
 
-/*
- * Copyright (c) 2013 Thibaut Courouble
- * http://www.cssflow.com
- *
- * Licensed under the MIT License:
- * http://www.opensource.org/licenses/mit-license.php
- */
 ::-moz-focus-inner {
   padding: 0;
   border: 0;
@@ -194,6 +187,8 @@ input, textarea, select, label {
   padding: 5px;
   background: #eef7f9;
   border-radius: 2px;
+  width: 200px;
+  margin-left: 35%;
 }
 .contact-input > input, .contact-input > textarea {
   display: block;
@@ -207,12 +202,14 @@ input, textarea, select, label {
   border-radius: 2px;
   -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.2);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.05), 0 1px rgba(255, 255, 255, 0.2);
+
 }
 .contact-input > input:focus, .contact-input > textarea:focus {
   border-color: #93c2ec;
   outline: 0;
   -webkit-box-shadow: 0 0 0 8px #e1ecf5;
   box-shadow: 0 0 0 8px #e1ecf5;
+
 }
 .lt-ie9 .contact-input > input, .lt-ie9 .contact-input > textarea {
   line-height: 27px;
@@ -259,7 +256,7 @@ input, textarea, select, label {
 .select > select {
   position: relative;
   z-index: 2;
-  width: 112%;
+  width: 12%;
   height: 29px;
   line-height: 17px;
   padding: 5px 9px;
@@ -305,4 +302,25 @@ input, textarea, select, label {
   border-color: #a3bed0 #b5ccda #b5ccda;
   -webkit-box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.2), 0 0 0 4px #eef7f9;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px rgba(255, 255, 255, 0.2), 0 0 0 4px #eef7f9;
+}
+
+.button1 {
+  margin-left: 35.5%;
+width:200px;
+height:40px;
+border-radius:20px;
+background:#459DE5;
+color:#fff;
+font-size:18px;
+cursor:pointer;
+}
+.button1:hover{
+background:#358DE5;
+}
+
+
+
+.block2{
+  margin-left: 30%;
+  margin-top:-35%;
 }

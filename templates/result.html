@@ -1,15 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>
-        Оценка на основе ваших показателей:
-        <input type="text" readonly value="{{ result.quality }}">
-    </p>
-</body>
+<!DOCTYPE HTML>
+<html>
+	<head>
+
+		<title>Dimension by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="../static/css/main.css">
+		<noscript><link rel="stylesheet" href="../static/css/noscript.css" /></noscript>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <link rel="stylesheet" href="../static/css/main.css">
+		<noscript><link rel="stylesheet" href="../static/css/noscript.css" /></noscript>
+
+        <!--Подключение скрипта через VK Api-->
+        <script type="text/javascript" src="https://vk.com/js/api/share.js?93" charset="windows-1251"></script>
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-gem"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1><input type="text" readonly value="{{ result.quality }}"></h1>
+								<p>где, 1 - Отличный уровень (Ваше здоровье находиться в полном порядки,
+									а физические возможности преобладают), 4 - требует внимания
+									(Ваше здоровье в плохом состояние, а силы покидают вас).</p>
+							</div>
+						</div>
+						<nav>
+							<ul>
+								<li><a href="index.html">На главную</a></li>
+                                <li> <script type="text/javascript">
+        document.write(VK.Share.button({
+                url: 'http://127.0.0.1:8000/',
+                title: 'Проведите оценку физических возомжностей вашего тела и здоровья (дайте баллов пожалуйста)', //заголовок
+                image: 'https://storage.googleapis.com/kaggle-datasets-images/1732554/2832282/1be2ae7e0f1bc3983e65c76bfe3a436e/dataset-card.jpg', //ссылка на первью
+                noparse: true
+            },
+            {
+                type: "custom",
+                text: "Поделиться" //содержимое текста кнопки
+            }));
+    </script> </li>
+
+								<li><a href="#about">Напиши нам</a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Work -->
+							<article id="work">
+								<h2 class="major">Work</h2>
+								<span class="image main"><img src="images/pic02.jpg" alt="" /></span>
+								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
+								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+							</article>
+					</div>
+
+				<!-- Footer -->
+					<footer id="footer">
+		 				<p class="copyright">&copy; 2022 OOO "Kazakh&Technologies".</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="../static/js/js/jquery.min.js"></script>
+			<script src="../static/js/js/browser.min.js"></script>
+			<script src="../static/js/js/breakpoints.min.js"></script>
+			<script src="../static/js/js/util.js"></script>
+			<script src="../static/js/js/main.js"></script>
+
+	</body>
 </html>
