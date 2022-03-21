@@ -7,8 +7,6 @@ load_dotenv(dotenv_path=Path(BASE_DIR.name + '/.env'))  # почему то не
 SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-dn)tm1@ps&z9b@mf0zrs9-o21_984hy($+)l(%kh6e5wnk^yzd')
 AZURE_URL = os.getenv('AZURE_URL', 'https://ussouthcentral.services.azureml.net/workspaces/537ecab0f57a42d985ffff543017c161/services/b682b82608b344d988fd9e2d726a044b/execute?api-version=2.0&details=true')
 AZURE_APIKEY = os.getenv('AZURE_APIKEY', 'iaAkXUF/hdCu7FonjFg37pDuu/EKcxhWqDwKG8qJL8xm7k9zq0h3iiHTn+3oXpSqsDXWWFfCTS2isC9249Aing==')
-print(AZURE_APIKEY)
-print(AZURE_URL)
 
 DEBUG = True
 
