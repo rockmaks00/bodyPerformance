@@ -1,4 +1,43 @@
 <!--Для доступа ко всем остальным страницам нужно пройти авторизацию-->
 
 <!--Пример кнопки для перехода на авторизацию VK API-->
-<a href="{% url 'social:begin' 'vk-oauth2' %}">Войти через ВКонтакте</a>
+
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Оценка качества здоровья</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../static/css/main.css" />
+		<noscript><link rel="stylesheet" href="../static/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+                    <header id="header">
+						<div class="logo">
+							<span class="icon fa-gem"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+								<h1>Авторизация</h1>
+                                <h2>    <a href="{% url 'social:begin' 'vk-oauth2' %}">Войти через ВКонтакте</a></h2>
+								<p>Для начала проведения теста, авторизируйтесь<br />
+								Наш сервис поможет определить уровень состояния здоровья и физические возможности вашего организма</p>
+							</div>
+						</div>
+					</header>
+            </div>
+    <!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="../static/js/jquery.min.js"></script>
+			<script src="../static/js/browser.min.js"></script>
+			<script src="../static/js/breakpoints.min.js"></script>
+			<script src="../static/js/util.js"></script>
+			<script src="../static/js/main.js"></script>
+    </body>
+</html>

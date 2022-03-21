@@ -1,0 +1,13 @@
+.container{
+    overflow:hidden;
+    width:600px
+}
+.box {
+    white-space: nowrap
+}
+
+.box div{
+    /*width:90px;*/
+    display:inline-block;
+    /*border:1px solid black*/
+}
