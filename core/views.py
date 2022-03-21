@@ -1,3 +1,4 @@
+from django.core import serializers
 from django.shortcuts import render, redirect
 from .models import Body
 from django.contrib.auth.models import User
@@ -43,4 +44,4 @@ def result(request):
 @login_required(login_url='/login/')
 def profile(request):
     data = Body.objects.filter(author=request.user.id)
-    return render(request, 'profile.html', {'data': data})
+    return render(request, 'profile.html', {'data': data, 'data_json': serializers.serialize("json", data)})
