@@ -1,23 +1,110 @@
-<!--Пример использования данных для создания таблицы истории пользователя-->
-{% if data %}
-<table>
-    <tr>
-        <td>id</td>
-        <td>Дата запроса</td>
-        <td>% жира</td>
-        <td>Оценка</td>
-    </tr>
-    {% for row in data %}
-    <tr>
-        <td>{{ row.id }}</td>
-        <td>{{ row.datetime }}</td>
-        <td>{{ row.fat }}</td>
-        <td>{{ row.body_class }}</td>
-    </tr>
-    {% endfor %}
-</table>
-{% else %}
-<p>
-    У вас пока нет данных
-</p>
-{% endif %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4/dist/Chart.min.js"></script>
+    <style type="text/css">
+       table, th, td
+       {
+          border: 1px solid black;
+          border-collapse: collapse;
+       }
+    </style>
+</head>
+
+<body>
+
+    <table border="1px solid black">
+        <thead>
+            <tr>
+                <th>№</th>
+                <th width="10px">Возраст</th>
+                <th>Пол</th>
+                <th>Рост</th>
+                <th>Вес</th>
+                <th width="10px">Процентное содержание жира</th>
+                <th width="10px">Нижнее артериальное давление</th>
+                <th width="10px">Верхнее артериальное давление</th>
+                <th width="10px">Сила хвата</th>
+                <th width="10px">Наклон из положения сидя (см.)</th>
+                <th width="10px">Количество приседания (макс. кол. раз)</th>
+                <th width="10px">Прыжок в длину (см.)</th>
+                <th>Время проверки</th>
+                <th width="10px">Оценка состояние здоровья</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for a in data %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{a.age}}</td>
+                    <td>{{a.gender}}</td>
+                    <td>{{a.height_cm}}</td>
+                    <td>{{a.weight_kg}}</td>
+                    <td>{{a.fat}}</td>
+                    <td>{{a.diastolic}}</td>
+                    <td>{{a.systolic}}</td>
+                    <td>{{a.gripForce}}</td>
+                    <td>{{a.sit_and_bend}}</td>
+                    <td>{{a.situps}}</td>
+                    <td>{{a.jump_cm}}</td>
+                    <td>{{a.datetime|date:"d.m.Y, G:H"}}</td>
+                    <td>{{a.body_class}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h3>График оценки вашего здоровия</h3>
+    <div style="display: flex; flex-direction: row;">
+        <div style="width: 800px; height:800px" ><canvas id="LineChart"  ></canvas></div>
+    </div>
+
+    <script>
+
+        var data_result = {{ data_json|safe }};
+
+        const list_datetime = []
+        const list_body_class = []
+        for (const el_data_result of data_result)
+        {
+            const {datetime, body_class} = el_data_result.fields
+            const date = new Date(datetime);
+
+            list_datetime.push(date.toLocaleString())
+            list_body_class.push(body_class)
+        }
+
+        const data = {
+            labels: list_datetime,
+            datasets: [{
+                label: 'Оценка состояние здоровья',
+                data: list_body_class,
+                fill: false,
+                borderColor: 'rgb(75, 192, 192)',
+                tension: 0.1
+            }],
+        };
+
+
+        if(list_body_class.length > 3)
+        {
+            var ctx_1 = document.getElementById('LineChart').getContext('2d');
+            var LineChart = new Chart(ctx_1, {
+            type: 'line',
+            data: data,
+            });
+        }
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>
+
