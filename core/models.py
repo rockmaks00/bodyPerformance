@@ -1,10 +1,15 @@
+import datetime as datetime
 from django.db import models
 import urllib3
 import json
+from django.contrib.auth.models import User
+from datetime import datetime
 from project.settings import AZURE_URL, AZURE_APIKEY
 
 
 class Body(models.Model):
+    author = models.ForeignKey(User, on_delete=models.CASCADE)
+    datetime = models.DateTimeField(default=datetime.now, blank=True)
     age = models.FloatField('age')
     gender = models.FloatField('gender')  # 0 - male; 1 - female
     height_cm = models.FloatField('height_cm')

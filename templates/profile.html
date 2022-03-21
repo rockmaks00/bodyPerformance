@@ -1,0 +1,23 @@
+<!--Пример использования данных для создания таблицы истории пользователя-->
+{% if data %}
+<table>
+    <tr>
+        <td>id</td>
+        <td>Дата запроса</td>
+        <td>% жира</td>
+        <td>Оценка</td>
+    </tr>
+    {% for row in data %}
+    <tr>
+        <td>{{ row.id }}</td>
+        <td>{{ row.datetime }}</td>
+        <td>{{ row.fat }}</td>
+        <td>{{ row.body_class }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>
+    У вас пока нет данных
+</p>
+{% endif %}
