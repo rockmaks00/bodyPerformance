@@ -1,6 +1,4 @@
-import json
 from django.core import serializers
-
 from django.shortcuts import render, redirect
 from .models import Body
 from django.contrib.auth.models import User
