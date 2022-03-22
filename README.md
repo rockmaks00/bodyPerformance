@@ -30,7 +30,7 @@ https://www.kaggle.com/kukuroo3/body-performance-data
 ### Стек технологий:
 
 - Python + Django (основной стек)
-- AzureML Studio (обучение на Random Forest, получение данных через API)
+- AzureML Studio (обучение модели Neural Network, получение данных через API)
 - sqlite3 (база данных)
 
 ### Список роутов:
