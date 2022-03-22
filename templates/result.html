@@ -1,8 +1,32 @@
-<head>
-	<!--Подключение скрипта для кнопки через VK Api-->
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Оценка качества здоровья</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="../static/css/main.css" />
+        <link rel="stylesheet" href="../static/css/my.css" />
+		<noscript><link rel="stylesheet" href="../static/css/noscript.css" /></noscript>
+
+        <!--Подключение скрипта для кнопки через VK Api-->
 	<script type="text/javascript" src="https://vk.com/js/api/share.js?93" charset="windows-1251"></script>
-</head>
-<body>
+
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<div class="logo">
+							<span class="icon fa-gem"></span>
+						</div>
+						<div class="content">
+							<div class="inner">
+
+
 	<p>
 		Результат
 <!--	Пример вывода результата, все поля доступные для получения:-->
@@ -10,7 +34,15 @@
 		<input type="text" readonly value="{{ result.body_class }}">
 	</p>
 	<!--Вставить кнопку "Поделиться" Вконтакте (по желанию)-->
-	<script type="text/javascript">
+
+
+                            </div>
+                        </div>
+                        <nav>
+							<ul>
+
+								<li><a href="/profile">Профиль</a></li>
+								<li><script type="text/javascript">
 		document.write(VK.Share.button({
 				url: 'http://127.0.0.1:8000/',
 				title: 'Проведите оценку физических возомжностей вашего тела и здоровья (дайте баллов пожалуйста)', //заголовок
@@ -21,5 +53,29 @@
 				type: "custom",
 				text: "Поделиться" //содержимое текста кнопки
 		}));
-	</script>
-</body>
+	</script></li>
+								<li><a href="/">На главную</a></li>
+								<!--<li><a href="#elements">Elements</a></li>-->
+							</ul>
+						</nav>
+                    </header>
+<!-- Footer -->
+					<footer id="footer">
+						<p class="copyright">&copy;2022 Kazakh & Technologies</a>.</p>
+					</footer>
+
+			</div>
+
+		<!-- BG -->
+			<div id="bg"></div>
+
+		<!-- Scripts -->
+			<script src="../static/js/jquery.min.js"></script>
+			<script src="../static/js/browser.min.js"></script>
+			<script src="../static/js/breakpoints.min.js"></script>
+			<script src="../static/js/util.js"></script>
+			<script src="../static/js/main.js"></script>
+
+
+	</body>
+</html>
